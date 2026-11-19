@@ -56,7 +56,7 @@ Trang web được thiết kế và lập trình theo phong cách **Poster thi�
 ---
 
 ## 🚀 3. Hướng Dẫn Vận Hành Trên Hosting Egg Node.js
-Dự án đã được cấu hình sẵn sàng để chạy trực tiếp trên các hệ thống hosting Container / Egg Node.js (như Pterodactyl, cPanel Node.js, v.v.) công khai qua địa chỉ **`r9.ivnbyte.com:25110`**.
+Dự án đã được cấu hình sẵn sàng để chạy trực tiếp trên các hệ thống hosting Container / Egg Node.js (như Pterodactyl, cPanel Node.js, v.v.) công khai qua địa chỉ **`trianthayco.duyduong.site`**.
 
 ### Lệnh khởi động (Startup Command trên Egg panel):
 ```bash
