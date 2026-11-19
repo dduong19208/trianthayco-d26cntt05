@@ -1,8 +1,10 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import PolaroidPhoto from './PolaroidPhoto';
 import PaperAirplaneSVG from './PaperAirplaneSVG';
+import HoaDauSVG from './HoaDauSVG';
 import { Sparkles, BookOpen, ChevronDown } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -19,9 +21,12 @@ export default function HeroSection({ onOpenLightbox }: HeroSectionProps) {
 
   return (
     <section className="relative pt-6 pb-12 sm:pt-10 sm:pb-16 md:pt-14 md:pb-24 px-3.5 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-      {/* Decorative Floating Airplane */}
+      {/* Decorative Floating Airplane & Hoa Dau */}
       <div className="absolute top-6 right-8 md:right-24 hidden sm:block animate-flight pointer-events-none">
         <PaperAirplaneSVG withTrail />
+      </div>
+      <div className="absolute top-16 left-6 hidden md:block animate-float-reverse opacity-75 pointer-events-none">
+        <HoaDauSVG size={40} color="#D97706" />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
@@ -61,14 +66,25 @@ export default function HeroSection({ onOpenLightbox }: HeroSectionProps) {
             </p>
           </blockquote>
 
-          {/* Subtitle / Department & University info */}
-          <div className="text-xs sm:text-sm md:text-base text-navy/80 space-y-1">
-            <p className="font-semibold text-academic text-sm sm:text-base">
-              Viện Công nghệ số – Trường Đại học Thủ Dầu Một
-            </p>
-            <p className="text-xs sm:text-sm text-gray-600">
-              Gửi trọn tình cảm tri ân sâu sắc nhất từ các bạn sinh viên tập thể lớp D26CNTT05
-            </p>
+          {/* Subtitle / Department & University info with School Logo */}
+          <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 sm:gap-4 pt-1">
+            <div className="relative h-10 w-24 sm:h-11 sm:w-28 shrink-0 transition-transform duration-300 hover:scale-105">
+              <Image
+                src="/images/tdmu-logo.png"
+                alt="Logo Trường Đại học Thủ Dầu Một"
+                fill
+                sizes="120px"
+                className="object-contain"
+              />
+            </div>
+            <div className="text-xs sm:text-sm md:text-base text-navy/80 space-y-0.5 text-center sm:text-left">
+              <p className="font-semibold text-academic text-sm sm:text-base">
+                Viện Công nghệ số – Trường Đại học Thủ Dầu Một
+              </p>
+              <p className="text-xs sm:text-sm text-gray-600">
+                Gửi trọn tình cảm tri ân sâu sắc nhất từ các bạn sinh viên tập thể lớp D26CNTT05
+              </p>
+            </div>
           </div>
 
           {/* Action Button: Scroll down to read timeline */}

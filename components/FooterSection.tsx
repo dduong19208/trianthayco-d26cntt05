@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import HeartCounter from './HeartCounter';
+import HoaDauSVG from './HoaDauSVG';
 import { ArrowUp, Share2, Check, Sparkles, Heart } from 'lucide-react';
 
 export default function FooterSection() {
@@ -61,8 +63,28 @@ export default function FooterSection() {
           </p>
         </div>
 
+        {/* TDMU School Logo Badge & Cánh Hoa Dầu */}
+        <div className="flex justify-center items-center gap-3 pt-1">
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-white/95 shadow-md border border-white/30 backdrop-blur-sm">
+            <div className="relative h-7 w-20 sm:h-8 sm:w-24 shrink-0">
+              <Image
+                src="/images/tdmu-logo.png"
+                alt="Logo Trường Đại học Thủ Dầu Một"
+                fill
+                sizes="100px"
+                className="object-contain"
+              />
+            </div>
+            <span className="h-4 w-[1px] bg-gray-200" />
+            <span className="text-[11px] sm:text-xs font-semibold text-navy flex items-center gap-1.5">
+              <span>Viện Công Nghệ Số</span>
+              <HoaDauSVG size={16} color="#D97706" />
+            </span>
+          </div>
+        </div>
+
         {/* Signature line - 100% Verbatim */}
-        <div className="pt-2 pb-2 sm:pb-4">
+        <div className="pt-1 pb-2 sm:pb-4">
           <p className="font-handwriting text-xl sm:text-2xl md:text-3xl text-gold font-bold tracking-wide break-words px-2 leading-snug">
             Tập thể lớp D26CNTT05 – Viện Công nghệ số – Trường Đại học Thủ Dầu Một
           </p>
